@@ -1,13 +1,13 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: arc-k8s-demo
+  name: arc-k8s-demo-test
   namespace: default
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
-      app: arc-k8s-demo
+      app: arc-k8s-demo-test
   strategy:
     rollingUpdate:
       maxSurge: 1
@@ -16,13 +16,13 @@ spec:
   template:
     metadata:
       labels:
-        app: arc-k8s-demo
+        app: arc-k8s-demo-test
     spec:
       nodeSelector:
         kubernetes.io/arch: amd64
         kubernetes.io/os: linux
       containers:
-      - name: arc-k8s-demo
+      - name: arc-k8s-demo-test
         image: arck8sconformance.azurecr.io/samples/demo:v0.1.0
         imagePullPolicy: IfNotPresent
         ports:
@@ -40,13 +40,13 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: arc-k8s-demo
+  name: arc-k8s-demo-test
   namespace: default
   labels:
-    name: arc-k8s-demo
+    name: arc-k8s-demo-test
 spec:
   type: ClusterIP
   ports:
   - port: 8080
   selector:
-    app: arc-k8s-demo
+    app: arc-k8s-demo-test
