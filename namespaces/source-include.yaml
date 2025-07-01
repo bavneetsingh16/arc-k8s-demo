@@ -8,5 +8,5 @@ spec:
     - repository:
         name: cluster-config
         namespace: cluster-config
-      fromPath: apps
-      toPath: namespaces
+      fromPath: apps/staging
+      toPath: cluster-apps/
