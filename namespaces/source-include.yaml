@@ -7,6 +7,5 @@ spec:
   include:
     - repository:
         name: cluster-config
-        namespace: cluster-config
       fromPath: apps/staging
       toPath: cluster-apps/
