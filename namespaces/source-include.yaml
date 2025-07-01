@@ -15,5 +15,5 @@ spec:
       toPath: cluster-apps/apps/staging
     - repository:
         name: cluster-config
-      fromPath: base/podinfo
-      toPath: cluster-apps/base/podinfo
+      fromPath: apps/base/podinfo
+      toPath: cluster-apps/apps/base/podinfo
