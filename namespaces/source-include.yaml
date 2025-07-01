@@ -1,0 +1,12 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: cluster-apps
+  namespace: cluster-apps
+spec:
+  include:
+    - repository:
+        name: cluster-config
+        namespace: cluster-config
+      fromPath: apps
+      toPath: namespaces
