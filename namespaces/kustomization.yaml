@@ -4,5 +4,6 @@ resources:
   - itops.yaml
   - team-a.yaml
   - team-b.yaml
+  - gitrepository-cluster-apps-placeholder.yaml
 patchesStrategicMerge:
   - patch-gitrepository-include.yaml
