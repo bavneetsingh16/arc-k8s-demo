@@ -1,15 +1,15 @@
 apiVersion: source.toolkit.fluxcd.io/v1
 kind: GitRepository
 metadata:
-  name: cluster-apps
-  namespace: cluster-config
+  name: "${current_git_repo_name}"
+  namespace: "${current_git_repo_ns}"
 spec:
   include:
     - repository:
-        name: cluster-config
-      fromPath: apps/staging
-      toPath: cluster-apps/apps/staging
+        name: "${include_repo_name}"
+      fromPath: "${staging_from_path}"
+      toPath: "${staging_to_path}"
     - repository:
-        name: cluster-config
-      fromPath: apps/base/podinfo
-      toPath: cluster-apps/apps/base/podinfo
+        name: "${include_repo_name}"
+      fromPath: "${podinfo_from_path}"
+      toPath: "${podinfo_to_path}"

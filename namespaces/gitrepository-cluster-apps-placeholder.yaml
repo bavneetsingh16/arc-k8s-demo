@@ -1,5 +1,5 @@
 apiVersion: source.toolkit.fluxcd.io/v1
 kind: GitRepository
 metadata:
-  name: cluster-apps
-  namespace: cluster-config
+  name: "${current_git_repo_name}"
+  namespace: "${current_git_repo_ns}"
