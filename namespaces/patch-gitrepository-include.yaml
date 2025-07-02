@@ -4,10 +4,6 @@ metadata:
   name: cluster-apps
   namespace: cluster-config
 spec:
-  interval: 1m0s
-  ref:
-    branch: flux_overlay
-  url: https://github.com/bavneetsingh16/arc-k8s-demo
   include:
     - repository:
         name: cluster-config

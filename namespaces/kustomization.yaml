@@ -4,4 +4,5 @@ resources:
   - itops.yaml
   - team-a.yaml
   - team-b.yaml
-  - source-include.yaml
+patchesStrategicMerge:
+  - patch-gitrepository-include.yaml
