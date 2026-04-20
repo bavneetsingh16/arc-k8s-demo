@@ -3,4 +3,5 @@ kind: Namespace
 metadata:
   labels:
     name: itops
+    sharding.fluxcd.io/key: shard1
   name: itops
